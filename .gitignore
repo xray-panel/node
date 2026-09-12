@@ -45,3 +45,6 @@ lerna-debug.log*
 
 /build
 *.tar.gz
+
+# Временный каталог теста очистки логов
+.tmp-logs-test/

@@ -6,11 +6,14 @@ import consola from 'consola';
 import http from 'node:http';
 import fs from 'fs';
 
+import { XrayLogsService } from '../../modules/xray-core/xray-logs.service';
+
 const enum CLI_ACTIONS {
     DUMP_CONFIG = 'dump-config',
     DUMP_CONFIG_RAW = 'dump-config-raw',
     EXIT = 'exit',
     KILL_SOCKETS = 'kill-sockets',
+    CLEAR_LOGS = 'clear-logs',
 }
 
 const S6_CONTAINER_ENV_DIR = '/run/s6/container_environment';
@@ -138,6 +141,22 @@ async function killSocketsByIP() {
     }
 }
 
+async function clearLogs() {
+    const service = new XrayLogsService();
+
+    consola.start('Clearing Xray logs...');
+
+    const result = await service.clearLogs();
+
+    consola.success(
+        `Log directory: ${result.directory}\n` +
+            `Rotated via s6-log: ${result.rotated ? 'yes' : 'no'}\n` +
+            `Removed archives: ${result.removedArchives}\n` +
+            `Freed bytes: ${result.bytesFreed}\n` +
+            `Truncated current directly: ${result.truncatedCurrent ? 'yes' : 'no'}`,
+    );
+}
+
 async function main() {
     consola.box('XPANEL Node CLI v0.1');
 
@@ -156,6 +175,11 @@ async function main() {
                 hint: 'Drop connections for specific IP address',
             },
             {
+                value: CLI_ACTIONS.CLEAR_LOGS,
+                label: 'Clear Xray logs',
+                hint: 'Rotate and remove collected log files',
+            },
+            {
                 value: CLI_ACTIONS.EXIT,
                 label: 'Exit',
             },
@@ -170,6 +194,10 @@ async function main() {
 
         case CLI_ACTIONS.KILL_SOCKETS:
             await killSocketsByIP();
+            break;
+
+        case CLI_ACTIONS.CLEAR_LOGS:
+            await clearLogs();
             break;
 
         case CLI_ACTIONS.EXIT:
@@ -192,6 +220,9 @@ function parseArgs(): CLI_ACTIONS | null {
         case '--kill-sockets':
         case '-k':
             return CLI_ACTIONS.KILL_SOCKETS;
+        case '--clear-logs':
+        case '-c':
+            return CLI_ACTIONS.CLEAR_LOGS;
         case '--help':
         case '-h':
             consola.log(`
@@ -201,6 +232,7 @@ Commands:
   --dump-config, -d         Dump current XRay configuration (pretty, colored)
   --dump-config-raw, -D     Dump raw XRay configuration to stdout (machine-readable, pipeable)
   --kill-sockets, -k        Kill sockets by IP address
+  --clear-logs, -c          Rotate Xray logs and remove collected log files
   --help, -h                Show this help message
 `);
             process.exit(0);
@@ -223,6 +255,11 @@ if (cliAction === CLI_ACTIONS.DUMP_CONFIG) {
     });
 } else if (cliAction === CLI_ACTIONS.KILL_SOCKETS) {
     killSocketsByIP().catch((e) => {
+        consola.error('❌ An error occurred:', e);
+        process.exit(1);
+    });
+} else if (cliAction === CLI_ACTIONS.CLEAR_LOGS) {
+    clearLogs().catch((e) => {
         consola.error('❌ An error occurred:', e);
         process.exit(1);
     });

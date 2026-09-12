@@ -6,11 +6,14 @@ import { errorHandler } from '@common/helpers/error-handler.helper';
 import { XRAY_CONTROLLER, XRAY_ROUTES } from '@libs/contracts/api';
 
 import {
+    ClearLogsResponseDto,
     GetNodeHealthCheckResponseDto,
     StartXrayRequestDto,
     StartXrayResponseDto,
     StopXrayResponseDto,
 } from './dtos/';
+import { ClearLogsResponseModel } from './models';
+import { XrayLogsService } from './xray-logs.service';
 import { XrayService } from './xray.service';
 
 @UseFilters(HttpExceptionFilter)
@@ -19,7 +22,10 @@ import { XrayService } from './xray.service';
 export class XrayController {
     private readonly logger = new Logger(XrayController.name);
 
-    constructor(private readonly xrayService: XrayService) {}
+    constructor(
+        private readonly xrayService: XrayService,
+        private readonly xrayLogsService: XrayLogsService,
+    ) {}
 
     @Post(XRAY_ROUTES.START)
     public async startXray(
@@ -56,6 +62,23 @@ export class XrayController {
 
         return {
             response: data,
+        };
+    }
+
+    @Post(XRAY_ROUTES.CLEAR_LOGS)
+    public async clearLogs(): Promise<ClearLogsResponseDto> {
+        this.logger.log('XPANEL requested to clear Xray logs.');
+
+        const result = await this.xrayLogsService.clearLogs();
+
+        return {
+            response: new ClearLogsResponseModel(
+                result.directory,
+                result.rotated,
+                result.removedArchives,
+                result.bytesFreed,
+                result.truncatedCurrent,
+            ),
         };
     }
 }

@@ -5,13 +5,21 @@ import { InternalModule } from '../internal/internal.module';
 import { COMMANDS } from './commands';
 import { CoreLoaderService } from './core-loader.service';
 import { GeodataService } from './geodata.service';
+import { XrayLogsService } from './xray-logs.service';
 import { XrayProcessService } from './xray-process.service';
 import { XrayController } from './xray.controller';
 import { XrayService } from './xray.service';
 
 @Module({
     imports: [InternalModule, CqrsModule],
-    providers: [XrayService, XrayProcessService, GeodataService, CoreLoaderService, ...COMMANDS],
+    providers: [
+        XrayService,
+        XrayProcessService,
+        XrayLogsService,
+        GeodataService,
+        CoreLoaderService,
+        ...COMMANDS,
+    ],
     controllers: [XrayController],
     exports: [XrayService],
 })

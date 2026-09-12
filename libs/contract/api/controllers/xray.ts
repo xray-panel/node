@@ -5,4 +5,5 @@ export const XRAY_ROUTES = {
     STOP: 'stop',
     STATUS: 'status',
     NODE_HEALTH_CHECK: 'healthcheck',
+    CLEAR_LOGS: 'clear-logs',
 } as const;

@@ -13,7 +13,7 @@ export async function getStartMessage(appPort: number, app: INestApplication) {
     const systemInfo = getSystemInfo();
 
     return renderBox(`XPANEL Node v${__RWNODE_VERSION__}`, [
-        'Docs → https://docs.CHANGE-ME.example\nCommunity → https://github.com/CHANGE-ME/xpanel',
+        'Docs → https://docs.xraypanel.dev\nCommunity → https://github.com/CHANGE-ME/xpanel',
         `API Port: ${appPort}`,
         `XRay Core: v${xrayInfo.version || 'N/A'}\nXRay Path: /usr/local/bin/xray`,
         `${systemInfo.cpus}C, ${systemInfo.cpuModel}, ${prettyBytes(systemInfo.memoryTotal)}`,

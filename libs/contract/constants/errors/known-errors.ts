@@ -5,6 +5,6 @@ export const KNOWN_ERRORS = {
         code: 'RN-001',
         message: 'Xray core failed to start',
         documentationUrl:
-            'https://docs.CHANGE-ME.example/docs/guides/common-errors#xml-rpc-fault-spawn-error-xray',
+            'https://docs.xraypanel.dev/docs/guides/common-errors#xml-rpc-fault-spawn-error-xray',
     },
 };

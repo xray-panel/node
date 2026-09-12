@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: 🐞 Bug Tracker XPANEL
-    url: https://https://docs.CHANGE-ME.example/c/bug-reports/13
+    url: https://https://docs.xraypanel.dev/c/bug-reports/13
     about: Report a bug — here
   - name: 💡 Feature Request XPANEL
-    url: https://https://docs.CHANGE-ME.example/c/fr/7
+    url: https://https://docs.xraypanel.dev/c/fr/7
     about: Suggest a feature — here

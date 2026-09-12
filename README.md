@@ -2,7 +2,7 @@
 
 Node for XPANEL Panel.
 
-Learn more about XPANEL Panel [here](https://docs.CHANGE-ME.example/).
+Learn more about XPANEL Panel [here](https://docs.xraypanel.dev/).
 
 # Contributors
 

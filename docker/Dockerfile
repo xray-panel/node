@@ -43,7 +43,9 @@ RUN apk add --no-cache curl \
 
 FROM alpine:3.21 AS asn
 
-ARG ASN_LMDB_URL=https://github.com/CHANGE-ME/xpanel/asn-index/releases/latest/download/asn-prefixes.lmdb.zst
+# ВНИМАНИЕ: это сторонний артефакт, а не ресурс XPANEL. Переопределите
+# через --build-arg на собственное зеркало с проверкой хэша.
+ARG ASN_LMDB_URL=https://github.com/remnawave/asn-index/releases/latest/download/asn-prefixes.lmdb.zst
 
 RUN apk add --no-cache zstd
 
@@ -58,7 +60,8 @@ RUN mkdir -p /usr/local/share/asn \
 FROM alpine:3.21 AS geocheck
 
 ARG GEOCHECK_VERSION=0.3.0
-ARG GEOCHECK_RELEASE_URL=https://github.com/CHANGE-ME/xpanel/geocheck/releases/download
+# ВНИМАНИЕ: сторонний артефакт. Переопределяется через --build-arg.
+ARG GEOCHECK_RELEASE_URL=https://github.com/remnawave/geocheck/releases/download
 ARG TARGETARCH
 
 RUN apk add --no-cache curl \

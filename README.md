@@ -1,18 +1,18 @@
-## Remnawave Node
+## XPANEL Node
 
-Node for Remnawave Panel.
+Node for XPANEL Panel.
 
-Learn more about Remnawave Panel [here](https://docs.rw/).
+Learn more about XPANEL Panel [here](https://docs.CHANGE-ME.example/).
 
 # Contributors
 
-Check [open issues](https://github.com/remnawave/panel/issues) to help the progress of this project.
+Check [open issues](https://github.com/CHANGE-ME/xpanel/panel/issues) to help the progress of this project.
 
 <p align="center">
-Thanks to the all contributors who have helped improve Remnawave:
+Thanks to the all contributors who have helped improve XPANEL:
 </p>
 <p align="center">
-<a href="https://github.com/remnawave/node/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=remnawave/node" />
+<a href="https://github.com/CHANGE-ME/xpanel/node/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=xpanel/node" />
 </a>
 </p>

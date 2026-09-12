@@ -3,7 +3,7 @@ variable "TAG" {
 }
 
 variable "REGISTRIES" {
-    default = ["remnawave/node", "ghcr.io/remnawave/node"]
+    default = ["xpanel/node", "ghcr.io/xpanel/node"]
 }
 
 variable "VARIANTS" {

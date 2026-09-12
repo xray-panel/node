@@ -139,7 +139,7 @@ async function killSocketsByIP() {
 }
 
 async function main() {
-    consola.box('Remnawave Node CLI v0.1');
+    consola.box('XPANEL Node CLI v0.1');
 
     const action = await consola.prompt('Select an action', {
         type: 'select',

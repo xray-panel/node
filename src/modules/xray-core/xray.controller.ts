@@ -36,7 +36,7 @@ export class XrayController {
 
     @Get(XRAY_ROUTES.STOP)
     public async stopXray(): Promise<StopXrayResponseDto> {
-        this.logger.log('Remnawave requested to stop Xray.');
+        this.logger.log('XPANEL requested to stop Xray.');
 
         const response = await this.xrayService.stopXray({
             withOnlineCheck: false,

@@ -1,17 +1,17 @@
 {
-  "name": "@remnawave/node",
+  "name": "@xpanel/node",
   "version": "3.4.1",
   "private": false,
-  "description": "Remnawave Node",
-  "homepage": "https://github.com/remnawave",
+  "description": "XPANEL Node",
+  "homepage": "https://github.com/CHANGE-ME/xpanel",
   "bugs": {
-    "url": "https://github.com/remnawave/node/issues"
+    "url": "https://github.com/CHANGE-ME/xpanel/node/issues"
   },
   "license": "AGPL-3.0-only",
   "author": "REMNAWAVE <github.com/remnawave>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/remnawave/node.git"
+    "url": "git+https://github.com/CHANGE-ME/xpanel/node.git"
   },
   "bin": {
     "cli": "dist/cli.js"

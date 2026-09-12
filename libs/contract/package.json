@@ -1,17 +1,17 @@
 {
-  "name": "@remnawave/node-contract",
+  "name": "@xpanel/node-contract",
   "version": "3.4.1",
-  "description": "A node-contract library for Remnawave Panel",
+  "description": "A node-contract library for XPANEL Panel",
   "keywords": [],
-  "homepage": "https://github.com/remnawave",
+  "homepage": "https://github.com/CHANGE-ME/xpanel",
   "bugs": {
-    "url": "https://github.com/remnawave/node/issues"
+    "url": "https://github.com/CHANGE-ME/xpanel/node/issues"
   },
   "license": "AGPL-3.0-only",
-  "author": "Remnawave",
+  "author": "XPANEL",
   "repository": {
     "type": "git",
-    "url": "https://github.com/remnawave/node"
+    "url": "https://github.com/CHANGE-ME/xpanel/node"
   },
   "files": [
     "build/**/*"

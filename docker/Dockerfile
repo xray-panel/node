@@ -43,7 +43,7 @@ RUN apk add --no-cache curl \
 
 FROM alpine:3.21 AS asn
 
-ARG ASN_LMDB_URL=https://github.com/remnawave/asn-index/releases/latest/download/asn-prefixes.lmdb.zst
+ARG ASN_LMDB_URL=https://github.com/CHANGE-ME/xpanel/asn-index/releases/latest/download/asn-prefixes.lmdb.zst
 
 RUN apk add --no-cache zstd
 
@@ -58,7 +58,7 @@ RUN mkdir -p /usr/local/share/asn \
 FROM alpine:3.21 AS geocheck
 
 ARG GEOCHECK_VERSION=0.3.0
-ARG GEOCHECK_RELEASE_URL=https://github.com/remnawave/geocheck/releases/download
+ARG GEOCHECK_RELEASE_URL=https://github.com/CHANGE-ME/xpanel/geocheck/releases/download
 ARG TARGETARCH
 
 RUN apk add --no-cache curl \
@@ -79,13 +79,13 @@ FROM node:24.20-trixie-slim
 
 ARG S6_OVERLAY_VERSION=3.2.3.2
 
-LABEL org.opencontainers.image.title="Remnawave Node"
-LABEL org.opencontainers.image.description="Remnawave Node with built-in XRay Core"
-LABEL org.opencontainers.image.url="https://github.com/remnawave/node"
-LABEL org.opencontainers.image.source="https://github.com/remnawave/node"
-LABEL org.opencontainers.image.vendor="Remnawave"
+LABEL org.opencontainers.image.title="XPANEL Node"
+LABEL org.opencontainers.image.description="XPANEL Node with built-in XRay Core"
+LABEL org.opencontainers.image.url="https://github.com/CHANGE-ME/xpanel/node"
+LABEL org.opencontainers.image.source="https://github.com/CHANGE-ME/xpanel/node"
+LABEL org.opencontainers.image.vendor="XPANEL"
 LABEL org.opencontainers.image.licenses="AGPL-3.0"
-LABEL org.opencontainers.image.documentation="https://docs.rw"
+LABEL org.opencontainers.image.documentation="https://docs.CHANGE-ME.example"
 
 WORKDIR /opt/app
 

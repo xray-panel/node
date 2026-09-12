@@ -12,8 +12,8 @@ export async function getStartMessage(appPort: number, app: INestApplication) {
     const xrayInfo = xrayService.getXrayInfo();
     const systemInfo = getSystemInfo();
 
-    return renderBox(`Remnawave Node v${__RWNODE_VERSION__}`, [
-        'Docs → https://docs.rw\nCommunity → https://t.me/remnawave',
+    return renderBox(`XPANEL Node v${__RWNODE_VERSION__}`, [
+        'Docs → https://docs.CHANGE-ME.example\nCommunity → https://github.com/CHANGE-ME/xpanel',
         `API Port: ${appPort}`,
         `XRay Core: v${xrayInfo.version || 'N/A'}\nXRay Path: /usr/local/bin/xray`,
         `${systemInfo.cpus}C, ${systemInfo.cpuModel}, ${prettyBytes(systemInfo.memoryTotal)}`,

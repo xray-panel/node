@@ -1,5 +1,5 @@
 export const NFT_TABLES_CONSTANTS = {
-    TABLE_NAME: 'remnanode',
+    TABLE_NAME: 'xpanelnode',
     TORRENT_BLOCKER_SET_NAME: 'torrent-blocker',
     INGRESS_FILTER_IP_SET_NAME: 'ingress-filter-ip',
     EGRESS_FILTER_IP_SET_NAME: 'egress-filter-ip',

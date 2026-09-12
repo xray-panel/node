@@ -30,7 +30,7 @@ RUN curl -L https://raw.githubusercontent.com/remnawave/scripts/main/scripts/ins
     && ln -s /usr/local/bin/xray /usr/local/bin/rw-core
 
 
-ARG ASN_LMDB_URL=https://github.com/remnawave/asn-index/releases/latest/download/asn-prefixes.lmdb.zst
+ARG ASN_LMDB_URL=https://github.com/CHANGE-ME/xpanel/asn-index/releases/latest/download/asn-prefixes.lmdb.zst
 
 RUN mkdir -p /var/log/xray /var/lib/rnode/xray /app /usr/local/share/asn \
     && echo '{}' > /var/lib/rnode/xray/xray-config.json \

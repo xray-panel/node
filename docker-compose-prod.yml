@@ -1,8 +1,8 @@
 services:
-  remnanode:
-    image: remnawave/node:latest
-    container_name: remnanode
-    hostname: remnanode
+  xpanelnode:
+    image: xpanel/node:latest
+    container_name: xpanelnode
+    hostname: xpanelnode
     network_mode: host
     restart: always
     cap_add:

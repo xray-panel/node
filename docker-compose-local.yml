@@ -1,7 +1,7 @@
 services:
   remnawave-node-local:
-    container_name: remnawave-node-local
-    hostname: remnawave-node-local
+    container_name: xpanel-node-local
+    hostname: xpanel-node-local
     build:
       context: .
       dockerfile: docker/Dockerfile

@@ -3,8 +3,8 @@ services:
     build:
       context: .
       dockerfile: docker/dev.Dockerfile
-    container_name: remnawave-node-dev
-    hostname: remnawave-node-dev
+    container_name: xpanel-node-dev
+    hostname: xpanel-node-dev
     env_file:
       - .env
     networks:

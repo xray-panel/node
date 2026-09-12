@@ -1,8 +1,8 @@
-blank_issues_enabled: false
+blank_issues_enabled: true
 contact_links:
-  - name: 🐞 Bug Tracker XPANEL
-    url: https://https://docs.xraypanel.dev/c/bug-reports/13
-    about: Report a bug — here
-  - name: 💡 Feature Request XPANEL
-    url: https://https://docs.xraypanel.dev/c/fr/7
-    about: Suggest a feature — here
+  - name: 🐞 Сообщить об ошибке
+    url: https://github.com/xray-panel/node/issues/new
+    about: Ошибка в этом репозитории
+  - name: 💡 Предложить улучшение
+    url: https://github.com/xray-panel/node/issues/new
+    about: Идея или улучшение

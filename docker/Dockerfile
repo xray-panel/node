@@ -84,8 +84,8 @@ ARG S6_OVERLAY_VERSION=3.2.3.2
 
 LABEL org.opencontainers.image.title="XPANEL Node"
 LABEL org.opencontainers.image.description="XPANEL Node with built-in XRay Core"
-LABEL org.opencontainers.image.url="https://github.com/kitten443/xpanel/node"
-LABEL org.opencontainers.image.source="https://github.com/kitten443/xpanel/node"
+LABEL org.opencontainers.image.url="https://github.com/xray-panel/node"
+LABEL org.opencontainers.image.source="https://github.com/xray-panel/node"
 LABEL org.opencontainers.image.vendor="XPANEL"
 LABEL org.opencontainers.image.licenses="AGPL-3.0"
 LABEL org.opencontainers.image.documentation="https://docs.xraypanel.dev"

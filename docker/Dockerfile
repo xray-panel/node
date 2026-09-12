@@ -20,7 +20,7 @@ RUN npm run build \
 
 FROM alpine:3.21 AS xray
 
-ARG XRAY_CORE_VERSION=v26.7.28
+ARG XRAY_CORE_VERSION=v26.9.9
 ARG UPSTREAM_REPO=XTLS
 ARG TARGETARCH
 
@@ -84,8 +84,8 @@ ARG S6_OVERLAY_VERSION=3.2.3.2
 
 LABEL org.opencontainers.image.title="XPANEL Node"
 LABEL org.opencontainers.image.description="XPANEL Node with built-in XRay Core"
-LABEL org.opencontainers.image.url="https://github.com/CHANGE-ME/xpanel/node"
-LABEL org.opencontainers.image.source="https://github.com/CHANGE-ME/xpanel/node"
+LABEL org.opencontainers.image.url="https://github.com/kitten443/xpanel/node"
+LABEL org.opencontainers.image.source="https://github.com/kitten443/xpanel/node"
 LABEL org.opencontainers.image.vendor="XPANEL"
 LABEL org.opencontainers.image.licenses="AGPL-3.0"
 LABEL org.opencontainers.image.documentation="https://docs.xraypanel.dev"

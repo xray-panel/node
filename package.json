@@ -3,15 +3,15 @@
   "version": "3.4.1",
   "private": false,
   "description": "XPANEL Node",
-  "homepage": "https://github.com/CHANGE-ME/xpanel",
+  "homepage": "https://github.com/kitten443/xpanel",
   "bugs": {
-    "url": "https://github.com/CHANGE-ME/xpanel/node/issues"
+    "url": "https://github.com/kitten443/xpanel/node/issues"
   },
   "license": "AGPL-3.0-only",
   "author": "REMNAWAVE <github.com/remnawave>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CHANGE-ME/xpanel/node.git"
+    "url": "git+https://github.com/kitten443/xpanel/node.git"
   },
   "bin": {
     "cli": "dist/cli.js"

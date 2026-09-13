@@ -218,6 +218,7 @@ docker exec -it xpanel-node cli --clear-logs
 - [xray-panel/backend](https://github.com/xray-panel/backend) — панель;
 - [xray-panel/frontend](https://github.com/xray-panel/frontend) — интерфейс панели;
 - [xray-panel/subscription-page](https://github.com/xray-panel/subscription-page) — страница подписки.
+- Telegram-канал проекта — https://t.me/x_lada
 
 ## Лицензия
 

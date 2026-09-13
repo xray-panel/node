@@ -13,7 +13,7 @@ export async function getStartMessage(appPort: number, app: INestApplication) {
     const systemInfo = getSystemInfo();
 
     return renderBox(`XLADA Node v${__RWNODE_VERSION__}`, [
-        'Docs → https://xlada.app\nCommunity → https://github.com/xray-panel',
+        'Docs → https://xlada.app\nCommunity → https://t.me/x_lada',
         `API Port: ${appPort}`,
         `XRay Core: v${xrayInfo.version || 'N/A'}\nXRay Path: /usr/local/bin/xray`,
         `${systemInfo.cpus}C, ${systemInfo.cpuModel}, ${prettyBytes(systemInfo.memoryTotal)}`,

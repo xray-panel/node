@@ -1,6 +1,6 @@
-# XPANEL Node
+# XLADA Node
 
-**XPANEL** — самостоятельная панель управления Xray. Проект основан на
+**XLADA** — самостоятельная панель управления Xray. Проект основан на
 [Remnawave](https://github.com/remnawave) и является форком
 [remnawave/node](https://github.com/remnawave/node).
 
@@ -13,13 +13,13 @@
 
 ## Атрибуция
 
-XPANEL — производная работа от Remnawave. Исходный код Remnawave
-распространяется под лицензией AGPL-3.0-only, и XPANEL сохраняет ту же
+XLADA — производная работа от Remnawave. Исходный код Remnawave
+распространяется под лицензией AGPL-3.0-only, и XLADA сохраняет ту же
 лицензию. Все права на оригинальный код принадлежат авторам Remnawave.
 Подробности — в файле `NOTICE`.
 
 Названия «Remnawave», её логотипы и домены принадлежат авторам Remnawave и в
-XPANEL не используются.
+XLADA не используются.
 
 ## Что это
 
@@ -66,7 +66,7 @@ XPANEL не используются.
   `geocheck`; оба адреса помечены как сторонние и переопределяются через
   `--build-arg`. Xray-core берётся из релизов `XTLS/Xray-core`.
 - **Контракты лежат внутри репозитория** — `libs/contract`. Это Node-библиотека
-  `@xpanel/node-contract` с Zod-схемами команд, маршрутами и моделями; форк
+  `@xlada/node-contract` с Zod-схемами команд, маршрутами и моделями; форк
   добавил в неё `ClearLogsCommand` (файлы `libs/contract/commands/xray/clear-logs.command.ts`
   и `libs/contract/api/controllers/xray.ts`).
 
@@ -221,6 +221,6 @@ docker exec -it xpanel-node cli --clear-logs
 
 ## Лицензия
 
-XPANEL Node распространяется под лицензией **AGPL-3.0-only**. Полный текст —
+XLADA Node распространяется под лицензией **AGPL-3.0-only**. Полный текст —
 в файле `LICENCE`, уведомления об авторских правах и компонентах апстрима — в
 файле `NOTICE`.

@@ -12,8 +12,8 @@ export async function getStartMessage(appPort: number, app: INestApplication) {
     const xrayInfo = xrayService.getXrayInfo();
     const systemInfo = getSystemInfo();
 
-    return renderBox(`XPANEL Node v${__RWNODE_VERSION__}`, [
-        'Docs → https://docs.xraypanel.dev\nCommunity → https://github.com/xray-panel',
+    return renderBox(`XLADA Node v${__RWNODE_VERSION__}`, [
+        'Docs → https://xlada.app\nCommunity → https://github.com/xray-panel',
         `API Port: ${appPort}`,
         `XRay Core: v${xrayInfo.version || 'N/A'}\nXRay Path: /usr/local/bin/xray`,
         `${systemInfo.cpus}C, ${systemInfo.cpuModel}, ${prettyBytes(systemInfo.memoryTotal)}`,

@@ -42,7 +42,7 @@ export class XrayController {
 
     @Get(XRAY_ROUTES.STOP)
     public async stopXray(): Promise<StopXrayResponseDto> {
-        this.logger.log('XPANEL requested to stop Xray.');
+        this.logger.log('XLADA requested to stop Xray.');
 
         const response = await this.xrayService.stopXray({
             withOnlineCheck: false,
@@ -67,7 +67,7 @@ export class XrayController {
 
     @Post(XRAY_ROUTES.CLEAR_LOGS)
     public async clearLogs(): Promise<ClearLogsResponseDto> {
-        this.logger.log('XPANEL requested to clear Xray logs.');
+        this.logger.log('XLADA requested to clear Xray logs.');
 
         const result = await this.xrayLogsService.clearLogs();
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Проверка очистки логов Xray (XPANEL).
+# Проверка очистки логов Xray (XLADA).
 #
 # Компилирует сервис и запускает его на временном каталоге логов, где роль
 # s6-log играет обычный набор файлов. Проверяет в том числе, что служебные
@@ -33,13 +33,13 @@ head -c 500 /dev/zero | tr '\0' 'b' > "$LOGS/@1700000000.s"
 printf 'lock' > "$LOGS/lock"
 printf 'state' > "$LOGS/state"
 
-export XPANEL_TEST_COMPILED="$COMPILED"
-export XPANEL_TEST_LOGS="$LOGS"
+export XLADA_TEST_COMPILED="$COMPILED"
+export XLADA_TEST_LOGS="$LOGS"
 export XRAY_LOG_DIR="$LOGS"
 export XRAY_LOG_S6_SERVICE_DIR="$LOGS/../nonexistent-service"
 
 node --input-type=commonjs -e '
-const { XrayLogsService } = require(process.env.XPANEL_TEST_COMPILED);
+const { XrayLogsService } = require(process.env.XLADA_TEST_COMPILED);
 const fs = require("node:fs");
 const path = require("node:path");
 
@@ -52,7 +52,7 @@ const check = (name, actual, expected) => {
 };
 
 (async () => {
-    const logs = process.env.XPANEL_TEST_LOGS;
+    const logs = process.env.XLADA_TEST_LOGS;
     const service = new XrayLogsService();
     const result = await service.clearLogs();
 

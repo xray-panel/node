@@ -1,8 +1,8 @@
 {
-  "name": "@xpanel/node",
+  "name": "@xlada/node",
   "version": "3.4.1",
   "private": false,
-  "description": "XPANEL Node",
+  "description": "XLADA Node",
   "homepage": "https://github.com/xray-panel",
   "bugs": {
     "url": "https://github.com/xray-panel/node/issues"

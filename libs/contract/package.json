@@ -1,14 +1,14 @@
 {
-  "name": "@xpanel/node-contract",
+  "name": "@xlada/node-contract",
   "version": "3.4.1",
-  "description": "A node-contract library for XPANEL Panel",
+  "description": "A node-contract library for XLADA Panel",
   "keywords": [],
   "homepage": "https://github.com/xray-panel",
   "bugs": {
     "url": "https://github.com/xray-panel/node/issues"
   },
   "license": "AGPL-3.0-only",
-  "author": "XPANEL",
+  "author": "XLADA",
   "repository": {
     "type": "git",
     "url": "https://github.com/xray-panel/node"

@@ -158,7 +158,7 @@ async function clearLogs() {
 }
 
 async function main() {
-    consola.box('XPANEL Node CLI v0.1');
+    consola.box('XLADA Node CLI v0.1');
 
     const action = await consola.prompt('Select an action', {
         type: 'select',

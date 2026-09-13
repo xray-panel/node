@@ -43,7 +43,7 @@ RUN apk add --no-cache curl \
 
 FROM alpine:3.21 AS asn
 
-# ВНИМАНИЕ: это сторонний артефакт, а не ресурс XPANEL. Переопределите
+# ВНИМАНИЕ: это сторонний артефакт, а не ресурс XLADA. Переопределите
 # через --build-arg на собственное зеркало с проверкой хэша.
 ARG ASN_LMDB_URL=https://github.com/remnawave/asn-index/releases/latest/download/asn-prefixes.lmdb.zst
 
@@ -82,13 +82,13 @@ FROM node:24.20-trixie-slim
 
 ARG S6_OVERLAY_VERSION=3.2.3.2
 
-LABEL org.opencontainers.image.title="XPANEL Node"
-LABEL org.opencontainers.image.description="XPANEL Node with built-in XRay Core"
+LABEL org.opencontainers.image.title="XLADA Node"
+LABEL org.opencontainers.image.description="XLADA Node with built-in XRay Core"
 LABEL org.opencontainers.image.url="https://github.com/xray-panel/node"
 LABEL org.opencontainers.image.source="https://github.com/xray-panel/node"
-LABEL org.opencontainers.image.vendor="XPANEL"
+LABEL org.opencontainers.image.vendor="XLADA"
 LABEL org.opencontainers.image.licenses="AGPL-3.0"
-LABEL org.opencontainers.image.documentation="https://docs.xraypanel.dev"
+LABEL org.opencontainers.image.documentation="https://xlada.app"
 
 WORKDIR /opt/app
 

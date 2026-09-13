@@ -1,6 +1,6 @@
 services:
   xpanelnode:
-    image: xpanel/node:latest
+    image: xlada/node:latest
     container_name: xpanelnode
     hostname: xpanelnode
     network_mode: host

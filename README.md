@@ -7,7 +7,7 @@
 | | |
 |---|---|
 | Организация | https://github.com/xray-panel |
-| Версия | 1.1.4 |
+| Версия | 1.1.5 |
 | Лицензия | AGPL-3.0-only (см. `LICENCE`) |
 | Апстрим | https://github.com/remnawave/node |
 

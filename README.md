@@ -7,7 +7,7 @@
 | | |
 |---|---|
 | Организация | https://github.com/xray-panel |
-| Версия | 1.1.2 |
+| Версия | 1.1.3 |
 | Лицензия | AGPL-3.0-only (см. `LICENCE`) |
 | Апстрим | https://github.com/remnawave/node |
 
@@ -118,7 +118,7 @@ base64-строку. Скопируйте её целиком, она однор
 
 ```bash
 docker run -d \
-  --name xpanel-node \
+  --name xlada-node \
   --restart unless-stopped \
   --network host \
   --cap-add NET_ADMIN \
@@ -171,7 +171,7 @@ exec /command/s6-log -b n0 s10485760 /var/log/xray
 Посмотреть логи из контейнера:
 
 ```bash
-docker exec -it xpanel-node xlogs
+docker exec -it xlada-node xlogs
 ```
 
 Очистить логи можно двумя способами.
@@ -183,7 +183,7 @@ docker exec -it xpanel-node xlogs
 **Вручную, из контейнера.** CLI-команда переиспользует тот же сервис:
 
 ```bash
-docker exec -it xpanel-node cli --clear-logs
+docker exec -it xlada-node cli --clear-logs
 ```
 
 Как это работает внутри: файл `current` пишет `s6-log` и держит его открытым,

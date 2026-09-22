@@ -1,8 +1,8 @@
 services:
-  xpanelnode:
+  xlada-node:
     image: ghcr.io/xray-panel/node:latest
-    container_name: xpanelnode
-    hostname: xpanelnode
+    container_name: xlada-node
+    hostname: xlada-node
     network_mode: host
     restart: always
     cap_add:

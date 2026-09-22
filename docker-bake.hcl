@@ -3,7 +3,7 @@ variable "TAG" {
 }
 
 variable "REGISTRIES" {
-    default = ["xpanel/node", "ghcr.io/xpanel/node"]
+    default = ["ghcr.io/xray-panel/node"]
 }
 
 variable "VARIANTS" {

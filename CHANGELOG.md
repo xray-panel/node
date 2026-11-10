@@ -4,7 +4,7 @@
 перед тегом `vX.Y.Z`; release-workflow берёт заметки из секции с текущей
 версией `package.json`.
 
-## [Unreleased]
+## [1.1.10] - 2026-11-10
 
 ### What's Changed
 

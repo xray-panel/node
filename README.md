@@ -75,7 +75,7 @@ XLADA не используются.
 В `docker/Dockerfile` версия ядра задана аргументом сборки:
 
 ```dockerfile
-ARG XRAY_CORE_VERSION=v26.10.31
+ARG XRAY_CORE_VERSION=v26.11.9
 ARG UPSTREAM_REPO=XTLS
 ```
 
@@ -85,7 +85,7 @@ ARG UPSTREAM_REPO=XTLS
 
 ```bash
 docker build \
-  --build-arg XRAY_CORE_VERSION=v26.10.31 \
+  --build-arg XRAY_CORE_VERSION=v26.11.9 \
   --build-arg UPSTREAM_REPO=XTLS \
   -f docker/Dockerfile .
 ```
@@ -93,7 +93,7 @@ docker build \
 Версия, установленная в образе, печатается при старте ноды:
 
 ```
-Xray version: Xray 26.10.31
+Xray version: Xray 26.11.9
 ```
 
 Дополнительно `init-env.sh` поддерживает переменную окружения
@@ -139,7 +139,7 @@ docker run -d \
 В логе ноды при старте печатается отчёт о проверке `SECRET_KEY` и версия ядра:
 
 ```
-Xray version: Xray 26.10.31
+Xray version: Xray 26.11.9
 ```
 
 Панель должна показать ноду как подключённую в течение минуты.

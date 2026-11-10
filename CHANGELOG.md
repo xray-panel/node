@@ -4,6 +4,15 @@
 перед тегом `vX.Y.Z`; release-workflow берёт заметки из секции с текущей
 версией `package.json`.
 
+## [Unreleased]
+
+### What's Changed
+
+* build(docker): bump Xray-core to v26.11.9
+* feat: make nftables table name configurable, keep `xpanelnode` as default
+* fix: respect `script` in routing
+* fix: allow suppressing the duplicate instance warning
+
 ## [1.1.9] - 2026-11-07
 
 ### What's Changed

@@ -4,6 +4,13 @@
 перед тегом `vX.Y.Z`; release-workflow берёт заметки из секции с текущей
 версией `package.json`.
 
+## [1.1.11] - 2026-11-14
+
+### What's Changed
+
+* build(docker): rebuild with Node.js 24.22.3
+* chore: update dependencies aligned with Remnawave Node 3.4.6
+
 ## [1.1.10] - 2026-11-10
 
 ### What's Changed
